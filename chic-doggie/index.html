@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chic Doggie the Grooming Studio | Dog Grooming in Newark, NJ</title>
+  <meta name="description" content="Chic Doggie the Grooming Studio – premium dog grooming in the Ironbound, Newark NJ. Bath, haircut, nails, ears, teeth, natural products and pet photo shoots. Book online." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FBF8F4',
+            sand: '#F3ECE3',
+            ink: '#2B2522',
+            muted: '#7A6F68',
+            rose: { 50:'#FDF2F4', 100:'#FBE3E8', 200:'#F6C6D1', 400:'#E58A9F', 500:'#D9677F', 600:'#C14E68', 700:'#A03C54' }
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: { soft: '0 10px 30px -12px rgba(43,37,34,.18)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    .size-opt input:checked + div, .slot input:checked + span { border-color:#D9677F; background:#FDF2F4; color:#A03C54; box-shadow: 0 0 0 2px #F6C6D1; }
+    .slot input:disabled + span { opacity:.35; text-decoration: line-through; cursor:not-allowed; }
+    .paw-bg { background-image: radial-gradient(circle at 20% 20%, #FBE3E8 0, transparent 40%), radial-gradient(circle at 85% 70%, #F3ECE3 0, transparent 45%); }
+  </style>
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+
+  <!-- Demo ribbon -->
+  <div class="bg-ink text-cream text-center text-xs py-2 px-4">
+    Demo website concept for Chic Doggie · prices, reviews and photos are placeholders
+  </div>
+
+  <!-- NAVBAR -->
+  <header id="top" class="sticky top-0 z-40 bg-cream/85 backdrop-blur border-b border-sand">
+    <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2">
+        <span class="w-9 h-9 rounded-full bg-rose-500 text-white grid place-items-center">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor"><circle cx="6" cy="9" r="2.2"/><circle cx="10" cy="5.5" r="2.2"/><circle cx="14" cy="5.5" r="2.2"/><circle cx="18" cy="9" r="2.2"/><path d="M12 10.5c-3 0-6 3.6-6 6.3 0 1.8 1.4 2.7 3 2.7 1.2 0 2-.6 3-.6s1.8.6 3 .6c1.6 0 3-.9 3-2.7 0-2.7-3-6.3-6-6.3z"/></svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-serif font-semibold text-lg">Chic Doggie</span>
+          <span class="block text-[10px] uppercase tracking-[.2em] text-muted -mt-0.5">the Grooming Studio</span>
+        </span>
+      </a>
+      <ul class="hidden md:flex items-center gap-7 text-sm font-medium">
+        <li><a href="#services" class="hover:text-rose-600">Services</a></li>
+        <li><a href="#booking" class="hover:text-rose-600">Book Online</a></li>
+        <li><a href="#gallery" class="hover:text-rose-600">Gallery</a></li>
+        <li><a href="#reviews" class="hover:text-rose-600">Reviews</a></li>
+        <li><a href="#visit" class="hover:text-rose-600">Visit</a></li>
+      </ul>
+      <a href="#booking" class="hidden md:inline-flex bg-rose-500 hover:bg-rose-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition">Book a Groom</a>
+      <button id="menuBtn" class="md:hidden w-10 h-10 grid place-items-center rounded-full hover:bg-sand" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-sand bg-cream">
+      <ul class="px-5 py-4 space-y-1 text-base font-medium">
+        <li><a href="#services" class="block py-2.5">Services</a></li>
+        <li><a href="#booking" class="block py-2.5">Book Online</a></li>
+        <li><a href="#gallery" class="block py-2.5">Gallery</a></li>
+        <li><a href="#reviews" class="block py-2.5">Reviews</a></li>
+        <li><a href="#visit" class="block py-2.5">Hours &amp; Location</a></li>
+        <li class="pt-2"><a href="#booking" class="block text-center bg-rose-500 text-white font-semibold py-3 rounded-full">Book a Groom</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="paw-bg">
+    <div class="max-w-6xl mx-auto px-5 pt-12 pb-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <span class="inline-flex items-center gap-2 bg-white border border-rose-100 text-rose-700 text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
+          ★ 4.7 rated · Ironbound, Newark
+        </span>
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] mt-5">
+          Pampered pups,<br /><span class="text-rose-500 italic">picture-perfect</span> style.
+        </h1>
+        <p class="mt-5 text-muted text-lg max-w-md">
+          Gentle, hands-on grooming with natural and organic products. Baths, haircuts, nails, ears, teeth and paw care — finished with a photo shoot your pup deserves.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#booking" class="inline-flex justify-center items-center bg-rose-500 hover:bg-rose-600 text-white font-semibold px-7 py-3.5 rounded-full shadow-soft transition">Book a Groom</a>
+          <a href="tel:+12016686508" class="inline-flex justify-center items-center bg-white border border-sand hover:border-rose-200 font-semibold px-7 py-3.5 rounded-full transition">Call (201) 668-6508</a>
+        </div>
+        <dl class="mt-10 grid grid-cols-3 gap-4 max-w-md">
+          <div><dt class="text-xs text-muted">Years in Newark</dt><dd class="font-serif text-2xl font-semibold">8+</dd></div>
+          <div><dt class="text-xs text-muted">Atly score</dt><dd class="font-serif text-2xl font-semibold">8.9</dd></div>
+          <div><dt class="text-xs text-muted">Products</dt><dd class="font-serif text-2xl font-semibold">Organic</dd></div>
+        </dl>
+      </div>
+      <div class="reveal relative">
+        <div class="aspect-[4/5] rounded-[2rem] bg-gradient-to-br from-rose-100 via-white to-sand shadow-soft overflow-hidden grid place-items-center relative">
+          <svg viewBox="0 0 200 200" class="w-2/3 text-rose-400" fill="currentColor" aria-hidden="true">
+            <path d="M60 70c-14-4-26 4-28 20s8 34 20 34c6 0 8-6 8-14V70z" opacity=".55"/>
+            <path d="M140 70c14-4 26 4 28 20s-8 34-20 34c-6 0-8-6-8-14V70z" opacity=".55"/>
+            <ellipse cx="100" cy="100" rx="45" ry="48" opacity=".9"/>
+            <circle cx="84" cy="92" r="5" fill="#2B2522"/><circle cx="116" cy="92" r="5" fill="#2B2522"/>
+            <ellipse cx="100" cy="114" rx="9" ry="6.5" fill="#2B2522"/>
+            <path d="M92 126c4 5 12 5 16 0" stroke="#2B2522" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M76 150h48l-6 18H82z" fill="#C14E68"/>
+          </svg>
+          <span class="absolute bottom-4 left-4 text-[11px] bg-white/80 text-muted px-2 py-1 rounded">Photo placeholder · add studio photo</span>
+        </div>
+        <div class="absolute -bottom-5 -left-3 sm:-left-6 bg-white rounded-2xl shadow-soft px-4 py-3 flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-rose-50 grid place-items-center text-xl">🌿</span>
+          <div class="text-sm"><b class="block">Natural &amp; organic</b><span class="text-muted">Gentle on sensitive skin</span></div>
+        </div>
+        <div class="absolute -top-4 -right-2 sm:-right-5 bg-white rounded-2xl shadow-soft px-4 py-3 text-sm">
+          <b class="block">📸 Photo shoot</b><span class="text-muted">Included in Spa Day</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <p class="text-rose-600 text-sm font-semibold uppercase tracking-widest">Services &amp; Pricing</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold mt-2">Everything your dog needs to look &amp; feel great</h2>
+        <p class="text-muted mt-3">Prices vary by size and coat condition.</p>
+        <span class="inline-block mt-3 text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full">DEMO — sample prices, to be confirmed by the studio</span>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="serviceCards"></div>
+
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+        <div class="rounded-2xl bg-sand/60 p-5"><p class="font-semibold">✂️ Nail trim</p><p class="text-sm text-muted">Walk-in friendly · from $15</p></div>
+        <div class="rounded-2xl bg-sand/60 p-5"><p class="font-semibold">👂 Ear cleaning</p><p class="text-sm text-muted">Gentle &amp; thorough · from $12</p></div>
+        <div class="rounded-2xl bg-sand/60 p-5"><p class="font-semibold">🦷 Teeth cleaning</p><p class="text-sm text-muted">Fresh breath brushing · from $15</p></div>
+        <div class="rounded-2xl bg-sand/60 p-5"><p class="font-semibold">🐾 Paw treatment</p><p class="text-sm text-muted">Pad balm &amp; trim · from $12</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="py-20 bg-cream">
+    <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-5 gap-10">
+      <div class="lg:col-span-2 reveal">
+        <p class="text-rose-600 text-sm font-semibold uppercase tracking-widest">Online Booking</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold mt-2">Book a groom in under a minute</h2>
+        <p class="text-muted mt-4">No more phone tag. Pick your dog’s size, a service and a time that works — we’ll text you to confirm.</p>
+        <ul class="mt-6 space-y-3 text-sm">
+          <li class="flex gap-3"><span class="text-rose-500">✔</span> Live estimate based on your dog’s size</li>
+          <li class="flex gap-3"><span class="text-rose-500">✔</span> Only open days &amp; free slots shown</li>
+          <li class="flex gap-3"><span class="text-rose-500">✔</span> Instant confirmation summary</li>
+        </ul>
+        <p class="mt-6 text-xs text-muted bg-white border border-sand rounded-xl p-3">Demo: this form is simulated. No booking is sent and no data leaves your device.</p>
+      </div>
+
+      <div class="lg:col-span-3 reveal">
+        <form id="bookingForm" class="bg-white rounded-3xl shadow-soft p-5 sm:p-8 space-y-6" novalidate>
+          <!-- Step 1: size -->
+          <fieldset>
+            <legend class="font-semibold mb-3"><span class="text-rose-500">1.</span> Your dog’s size</legend>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="sizeOptions"></div>
+          </fieldset>
+
+          <!-- Step 2: service -->
+          <div>
+            <label for="service" class="font-semibold block mb-2"><span class="text-rose-500">2.</span> Service</label>
+            <select id="service" name="service" class="w-full border border-sand rounded-xl px-4 py-3 bg-cream focus:outline-none focus:ring-2 focus:ring-rose-200" required></select>
+            <label class="mt-3 flex items-center gap-2 text-sm text-muted">
+              <input type="checkbox" id="addonPhoto" class="accent-rose-500 w-4 h-4" /> Add a mini photo shoot (+$25)
+            </label>
+          </div>
+
+          <!-- Step 3: date & time -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="date" class="font-semibold block mb-2"><span class="text-rose-500">3.</span> Date</label>
+              <input type="date" id="date" name="date" class="w-full border border-sand rounded-xl px-4 py-3 bg-cream focus:outline-none focus:ring-2 focus:ring-rose-200" required />
+              <p id="dateHint" class="text-xs text-muted mt-1">Open Tuesday–Saturday</p>
+            </div>
+            <div>
+              <span class="font-semibold block mb-2"><span class="text-rose-500">4.</span> Time</span>
+              <div id="slots" class="grid grid-cols-3 gap-2 text-sm"></div>
+            </div>
+          </div>
+
+          <!-- Step 4: contact -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="font-semibold block mb-2"><span class="text-rose-500">5.</span> Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" class="w-full border border-sand rounded-xl px-4 py-3 bg-cream focus:outline-none focus:ring-2 focus:ring-rose-200" required />
+            </div>
+            <div>
+              <label for="phone" class="font-semibold block mb-2">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(201) 555-0123" class="w-full border border-sand rounded-xl px-4 py-3 bg-cream focus:outline-none focus:ring-2 focus:ring-rose-200" required />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="dogName" class="font-semibold block mb-2">Dog’s name <span class="text-muted font-normal text-sm">(optional)</span></label>
+              <input id="dogName" name="dogName" type="text" placeholder="Bella" class="w-full border border-sand rounded-xl px-4 py-3 bg-cream focus:outline-none focus:ring-2 focus:ring-rose-200" />
+            </div>
+          </div>
+
+          <p id="formError" class="hidden text-sm text-rose-700 bg-rose-50 border border-rose-200 rounded-xl px-4 py-3"></p>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2 border-t border-sand">
+            <p class="text-sm pt-4">Estimated total: <b id="estimate" class="font-serif text-2xl text-ink">—</b> <span class="text-xs text-muted">(demo)</span></p>
+            <button type="submit" class="mt-0 sm:mt-4 bg-rose-500 hover:bg-rose-600 text-white font-semibold px-7 py-3.5 rounded-full shadow-soft transition">Confirm Booking</button>
+          </div>
+        </form>
+
+        <!-- Confirmation -->
+        <div id="confirmation" class="hidden bg-white rounded-3xl shadow-soft p-6 sm:p-8" role="status" aria-live="polite">
+          <div class="flex items-center gap-3">
+            <span class="w-12 h-12 rounded-full bg-rose-500 text-white grid place-items-center text-2xl">✓</span>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-rose-600 font-semibold">Booking request received</p>
+              <h3 class="font-serif text-2xl font-semibold">See you soon<span id="cDog"></span>!</h3>
+            </div>
+          </div>
+          <dl class="mt-6 grid grid-cols-2 gap-x-4 gap-y-3 text-sm bg-cream rounded-2xl p-5">
+            <dt class="text-muted">Confirmation #</dt><dd id="cCode" class="font-semibold text-right"></dd>
+            <dt class="text-muted">Service</dt><dd id="cService" class="font-semibold text-right"></dd>
+            <dt class="text-muted">Dog size</dt><dd id="cSize" class="font-semibold text-right"></dd>
+            <dt class="text-muted">Date</dt><dd id="cDate" class="font-semibold text-right"></dd>
+            <dt class="text-muted">Time</dt><dd id="cTime" class="font-semibold text-right"></dd>
+            <dt class="text-muted">Name</dt><dd id="cName" class="font-semibold text-right"></dd>
+            <dt class="text-muted">Phone</dt><dd id="cPhone" class="font-semibold text-right"></dd>
+            <dt class="text-muted border-t border-sand pt-3">Estimated total</dt><dd id="cTotal" class="font-serif text-xl font-semibold text-right border-t border-sand pt-3"></dd>
+          </dl>
+          <p class="text-xs text-muted mt-4">We’ll text you to confirm. Need to change something? Call <a class="text-rose-600 font-semibold" href="tel:+12016686508">(201) 668-6508</a>. <br />Demo only — no booking was actually sent.</p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <button id="newBooking" class="bg-ink text-white font-semibold px-6 py-3 rounded-full">Book another dog</button>
+            <a href="tel:+12016686508" class="text-center border border-sand font-semibold px-6 py-3 rounded-full">Call the studio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <p class="text-rose-600 text-sm font-semibold uppercase tracking-widest">Before &amp; After</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold mt-2">Fresh cuts, happy tails</h2>
+        <p class="text-muted mt-3 text-sm">Placeholders — replace with real client photos from the studio.</p>
+      </div>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="py-20 bg-sand/50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <p class="text-rose-600 text-sm font-semibold uppercase tracking-widest">Happy Clients</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold mt-2">Loved by Ironbound pups</h2>
+        <span class="inline-block mt-3 text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full">Example reviews for the demo — not real customer quotes</span>
+      </div>
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <figure class="bg-white rounded-3xl p-6 shadow-soft reveal">
+          <p class="text-rose-500">★★★★★</p>
+          <blockquote class="mt-3 text-[15px]">“My shih tzu came home looking like a show dog and smelling amazing. Booking online makes it so easy.”</blockquote>
+          <figcaption class="mt-5 text-sm text-muted">— Example client · Shih Tzu owner</figcaption>
+        </figure>
+        <figure class="bg-white rounded-3xl p-6 shadow-soft reveal">
+          <p class="text-rose-500">★★★★★</p>
+          <blockquote class="mt-3 text-[15px]">“Gentle with my anxious rescue and they use natural products for his sensitive skin. We won’t go anywhere else.”</blockquote>
+          <figcaption class="mt-5 text-sm text-muted">— Example client · Rescue mix owner</figcaption>
+        </figure>
+        <figure class="bg-white rounded-3xl p-6 shadow-soft reveal">
+          <p class="text-rose-500">★★★★★</p>
+          <blockquote class="mt-3 text-[15px]">“The photo shoot after the groom was the cutest thing. Those pictures are now our holiday card!”</blockquote>
+          <figcaption class="mt-5 text-sm text-muted">— Example client · Poodle owner</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & MAP -->
+  <section id="visit" class="py-20 bg-cream">
+    <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-8">
+      <div class="reveal">
+        <p class="text-rose-600 text-sm font-semibold uppercase tracking-widest">Visit Us</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold mt-2">Hours &amp; location</h2>
+        <div class="mt-6 bg-white rounded-3xl shadow-soft p-6">
+          <ul class="divide-y divide-sand text-sm" id="hoursList"></ul>
+          <p class="mt-4 text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">Confirm hours — directories list different schedules. Appointment recommended.</p>
+        </div>
+        <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
+          <div class="bg-white rounded-2xl p-5 shadow-soft">
+            <p class="font-semibold">📍 Address</p>
+            <p class="text-muted mt-1">36 Magazine St<br />Newark, NJ 07105</p>
+            <a class="inline-block mt-2 text-rose-600 font-semibold" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=36+Magazine+St+Newark+NJ+07105">Get directions →</a>
+          </div>
+          <div class="bg-white rounded-2xl p-5 shadow-soft">
+            <p class="font-semibold">📞 Phone</p>
+            <p class="text-muted mt-1">Call or text us</p>
+            <a class="inline-block mt-2 text-rose-600 font-semibold" href="tel:+12016686508">(201) 668-6508</a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal rounded-3xl overflow-hidden shadow-soft min-h-[320px] bg-sand">
+        <iframe title="Map to Chic Doggie, 36 Magazine St, Newark NJ" class="w-full h-full min-h-[320px] lg:min-h-[480px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=36%20Magazine%20St%2C%20Newark%2C%20NJ%2007105&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-rose-500 text-white">
+    <div class="max-w-6xl mx-auto px-5 py-14 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div>
+        <h2 class="font-serif text-3xl font-semibold">Ready for a fresh new look?</h2>
+        <p class="text-rose-50 mt-1">Spots fill up fast on Saturdays — reserve yours today.</p>
+      </div>
+      <a href="#booking" class="bg-white text-rose-700 font-semibold px-8 py-3.5 rounded-full shadow-soft">Book a Groom</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-cream/80 text-sm">
+    <div class="max-w-6xl mx-auto px-5 py-10 pb-28 md:pb-10 flex flex-col md:flex-row justify-between gap-4">
+      <p><b class="text-white font-serif">Chic Doggie the Grooming Studio</b><br />36 Magazine St, Newark, NJ 07105 · (201) 668-6508</p>
+      <p class="text-cream/50 text-xs md:text-right">© <span id="year"></span> Chic Doggie. Demo concept — content to be confirmed by the business.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING CALL BUTTON -->
+  <a href="tel:+12016686508" aria-label="Call Chic Doggie at (201) 668-6508"
+     class="fixed z-50 bottom-4 right-4 sm:bottom-6 sm:right-6 flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-full shadow-soft pl-4 pr-5 py-3.5 transition">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.3a1 1 0 01.95.68l1.5 4.5a1 1 0 01-.5 1.2l-2.26 1.13a11 11 0 005.52 5.52l1.13-2.26a1 1 0 011.2-.5l4.5 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.7 21 3 14.3 3 6V5z"/></svg>
+    <span class="hidden sm:inline">Call now</span><span class="sm:hidden">Call</span>
+  </a>
+
+  <script>
+    // ---------- Data (DEMO prices) ----------
+    const SIZES = [
+      { id: 'S',  label: 'Small',  hint: 'up to 20 lb', icon: '🐶', mult: 1.0 },
+      { id: 'M',  label: 'Medium', hint: '21–50 lb',    icon: '🐕', mult: 1.25 },
+      { id: 'L',  label: 'Large',  hint: '51–90 lb',    icon: '🦮', mult: 1.55 },
+      { id: 'XL', label: 'X-Large',hint: '90+ lb',      icon: '🐕‍🦺', mult: 1.85 }
+    ];
+    const SERVICES = [
+      { id: 'bath',  name: 'Bath & Brush',        base: 45, mins: 60,  desc: 'Organic shampoo, conditioner, blow-dry, brush-out, ear cleaning & nail trim.', icon: '🛁' },
+      { id: 'groom', name: 'Full Groom',          base: 65, mins: 90,  desc: 'Everything in Bath & Brush plus a breed-style or custom haircut.', icon: '✂️', popular: true },
+      { id: 'spa',   name: 'Chic Spa Day',        base: 95, mins: 120, desc: 'Full Groom + teeth cleaning, paw treatment, blueberry facial and a mini photo shoot.', icon: '🌸' },
+      { id: 'puppy', name: 'Puppy Intro',         base: 35, mins: 45,  desc: 'A gentle first visit for pups under 6 months: bath, face & feet tidy.', icon: '🐾' },
+      { id: 'tidy',  name: 'Face, Feet & Tail',   base: 30, mins: 40,  desc: 'Quick tidy-up between full grooms to keep them looking sharp.', icon: '🎀' },
+      { id: 'photo', name: 'Pet Photo Shoot',     base: 40, mins: 30,  desc: 'Styled studio portraits with props — perfect for birthdays and holidays.', icon: '📸', flat: true }
+    ];
+    const HOURS = [['Monday','Closed'],['Tuesday','9:00 AM – 5:00 PM'],['Wednesday','9:00 AM – 5:00 PM'],['Thursday','9:00 AM – 5:00 PM'],['Friday','9:00 AM – 5:00 PM'],['Saturday','9:00 AM – 5:00 PM'],['Sunday','Closed']];
+    const SLOTS = ['9:00 AM','10:00 AM','11:00 AM','12:00 PM','1:00 PM','2:00 PM','3:00 PM','4:00 PM'];
+    const OPEN_DAYS = [2,3,4,5,6]; // Tue–Sat
+    const PHOTO_ADDON = 25;
+    const $ = (s) => document.querySelector(s);
+
+    // ---------- Service cards ----------
+    $('#serviceCards').innerHTML = SERVICES.map(s => `
+      <article class="reveal relative rounded-3xl border ${s.popular ? 'border-rose-200 bg-rose-50/60' : 'border-sand bg-cream'} p-6 flex flex-col">
+        ${s.popular ? '<span class="absolute -top-3 left-6 bg-rose-500 text-white text-[11px] font-semibold px-3 py-1 rounded-full">Most popular</span>' : ''}
+        <div class="flex items-start justify-between gap-3">
+          <span class="text-3xl">${s.icon}</span>
+          <span class="text-right"><span class="text-xs text-muted block">${s.flat ? 'flat' : 'from'}</span><span class="font-serif text-2xl font-semibold">$${s.base}</span></span>
+        </div>
+        <h3 class="font-serif text-xl font-semibold mt-4">${s.name}</h3>
+        <p class="text-sm text-muted mt-2 flex-1">${s.desc}</p>
+        <div class="mt-5 flex items-center justify-between text-sm">
+          <span class="text-muted">⏱ ~${s.mins} min</span>
+          <a href="#booking" data-service="${s.id}" class="pick-service font-semibold text-rose-600 hover:text-rose-700">Book →</a>
+        </div>
+      </article>`).join('');
+
+    // ---------- Gallery placeholders ----------
+    const GALLERY = [['Golden Doodle','Full Groom'],['Shih Tzu','Puppy cut'],['Yorkie','Spa Day'],['Poodle','Show style'],['Maltese','Bath & Tidy'],['Rescue Mix','De-shed & bath']];
+    $('#galleryGrid').innerHTML = GALLERY.map(([breed, svc]) => `
+      <figure class="reveal rounded-3xl overflow-hidden bg-cream border border-sand">
+        <div class="grid grid-cols-2">
+          <div class="aspect-square bg-gradient-to-br from-stone-200 to-stone-300 grid place-items-center relative">
+            <span class="text-4xl opacity-60">🐕</span>
+            <span class="absolute top-2 left-2 text-[10px] font-semibold uppercase tracking-wider bg-white/85 px-2 py-0.5 rounded">Before</span>
+          </div>
+          <div class="aspect-square bg-gradient-to-br from-rose-100 to-rose-200 grid place-items-center relative">
+            <span class="text-4xl">🐩</span>
+            <span class="absolute top-2 right-2 text-[10px] font-semibold uppercase tracking-wider bg-rose-500 text-white px-2 py-0.5 rounded">After</span>
+          </div>
+        </div>
+        <figcaption class="p-4 flex justify-between text-sm"><b>${breed}</b><span class="text-muted">${svc}</span></figcaption>
+      </figure>`).join('');
+
+    // ---------- Hours ----------
+    const today = new Date().getDay();
+    const dayIdx = [1,2,3,4,5,6,0];
+    $('#hoursList').innerHTML = HOURS.map(([d,h],i) => `
+      <li class="flex justify-between py-2.5 ${dayIdx[i]===today ? 'font-semibold text-rose-700' : ''}">
+        <span>${d}${dayIdx[i]===today ? ' · today' : ''}</span><span class="${h==='Closed' ? 'text-muted' : ''}">${h}</span>
+      </li>`).join('');
+
+    // ---------- Booking form ----------
+    $('#sizeOptions').innerHTML = SIZES.map((s,i) => `
+      <label class="size-opt cursor-pointer">
+        <input type="radio" name="size" value="${s.id}" class="sr-only" ${i===0?'checked':''} />
+        <div class="border border-sand rounded-2xl p-3 text-center transition hover:border-rose-200">
+          <div class="text-2xl">${s.icon}</div>
+          <div class="font-semibold text-sm mt-1">${s.label}</div>
+          <div class="text-[11px] text-muted">${s.hint}</div>
+        </div>
+      </label>`).join('');
+
+    $('#service').innerHTML = '<option value="">Choose a service…</option>' +
+      SERVICES.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
+
+    const pad = n => String(n).padStart(2,'0');
+    const toISO = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+    const dateInput = $('#date');
+    const now = new Date();
+    dateInput.min = toISO(now);
+    const maxD = new Date(now); maxD.setDate(maxD.getDate() + 60);
+    dateInput.max = toISO(maxD);
+    // preselect next open day
+    const next = new Date(now); next.setDate(next.getDate() + 1);
+    while (!OPEN_DAYS.includes(next.getDay())) next.setDate(next.getDate() + 1);
+    dateInput.value = toISO(next);
+
+    // deterministic "booked" slots per date to simulate availability
+    function bookedFor(iso) {
+      let h = 0; for (const c of iso) h = (h * 31 + c.charCodeAt(0)) % 9973;
+      return new Set([h % SLOTS.length, (h * 7 + 3) % SLOTS.length]);
+    }
+    function renderSlots() {
+      const iso = dateInput.value;
+      const d = iso ? new Date(iso + 'T12:00:00') : null;
+      const open = d && OPEN_DAYS.includes(d.getDay());
+      $('#dateHint').textContent = !d ? 'Open Tuesday–Saturday' : open ? 'Open · pick a time' : 'Closed that day — please pick Tue–Sat';
+      $('#dateHint').className = 'text-xs mt-1 ' + (d && !open ? 'text-rose-700 font-semibold' : 'text-muted');
+      const booked = open ? bookedFor(iso) : new Set();
+      const isToday = iso === toISO(now);
+      $('#slots').innerHTML = SLOTS.map((t,i) => {
+        let hr = parseInt(t); if (t.includes('PM') && hr !== 12) hr += 12;
+        const past = isToday && hr <= now.getHours();
+        const dis = !open || booked.has(i) || past;
+        return `<label class="slot cursor-pointer">
+          <input type="radio" name="time" value="${t}" class="sr-only" ${dis?'disabled':''} />
+          <span class="block text-center border border-sand rounded-xl py-2 transition hover:border-rose-200">${t.replace(':00','')}</span>
+        </label>`;
+      }).join('');
+    }
+    dateInput.addEventListener('change', renderSlots);
+    renderSlots();
+
+    function currentPrice() {
+      const svc = SERVICES.find(s => s.id === $('#service').value);
+      if (!svc) return null;
+      const size = SIZES.find(s => s.id === document.querySelector('input[name="size"]:checked').value);
+      let total = svc.flat ? svc.base : Math.round(svc.base * size.mult);
+      if ($('#addonPhoto').checked && svc.id !== 'spa' && svc.id !== 'photo') total += PHOTO_ADDON;
+      return total;
+    }
+    function updateEstimate() {
+      const p = currentPrice();
+      $('#estimate').textContent = p == null ? '—' : '$' + p;
+      const svc = $('#service').value;
+      $('#addonPhoto').disabled = svc === 'spa' || svc === 'photo';
+      $('#addonPhoto').parentElement.classList.toggle('opacity-50', $('#addonPhoto').disabled);
+    }
+    $('#bookingForm').addEventListener('change', updateEstimate);
+    updateEstimate();
+
+    // "Book →" on service cards preselects the service
+    document.querySelectorAll('.pick-service').forEach(a => a.addEventListener('click', () => {
+      $('#service').value = a.dataset.service; updateEstimate();
+    }));
+
+    function showError(msg) { const e = $('#formError'); e.textContent = msg; e.classList.remove('hidden'); }
+
+    $('#bookingForm').addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      $('#formError').classList.add('hidden');
+      const svc = SERVICES.find(s => s.id === $('#service').value);
+      const size = SIZES.find(s => s.id === document.querySelector('input[name="size"]:checked').value);
+      const iso = dateInput.value;
+      const d = iso ? new Date(iso + 'T12:00:00') : null;
+      const time = document.querySelector('input[name="time"]:checked');
+      const name = $('#name').value.trim();
+      const phone = $('#phone').value.trim();
+      const digits = phone.replace(/\D/g, '');
+
+      if (!svc) return showError('Please choose a service.');
+      if (!d || !OPEN_DAYS.includes(d.getDay())) return showError('Please pick an open day (Tuesday–Saturday).');
+      if (!time) return showError('Please pick an available time slot.');
+      if (name.length < 2) return showError('Please enter your name.');
+      if (digits.length < 10) return showError('Please enter a valid phone number (10 digits).');
+
+      const addon = $('#addonPhoto').checked && !$('#addonPhoto').disabled;
+      const dog = $('#dogName').value.trim();
+      $('#cCode').textContent = 'CD-' + Math.random().toString(36).slice(2, 7).toUpperCase();
+      $('#cService').textContent = svc.name + (addon ? ' + Photo shoot' : '');
+      $('#cSize').textContent = `${size.label} (${size.hint})`;
+      $('#cDate').textContent = d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+      $('#cTime').textContent = time.value;
+      $('#cName').textContent = name;
+      const l = digits.slice(-10);
+      $('#cPhone').textContent = `(${l.slice(0,3)}) ${l.slice(3,6)}-${l.slice(6)}`;
+      $('#cTotal').textContent = '$' + currentPrice() + ' (est.)';
+      $('#cDog').textContent = dog ? ', ' + dog : '';
+
+      $('#bookingForm').classList.add('hidden');
+      $('#confirmation').classList.remove('hidden');
+      $('#confirmation').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    $('#newBooking').addEventListener('click', () => {
+      $('#bookingForm').reset();
+      dateInput.value = toISO(next);
+      renderSlots(); updateEstimate();
+      $('#confirmation').classList.add('hidden');
+      $('#bookingForm').classList.remove('hidden');
+    });
+
+    // ---------- Mobile menu ----------
+    const menuBtn = $('#menuBtn'), mobileMenu = $('#mobileMenu');
+    function setMenu(open) {
+      mobileMenu.classList.toggle('hidden', !open);
+      $('#iconOpen').classList.toggle('hidden', open);
+      $('#iconClose').classList.toggle('hidden', !open);
+      menuBtn.setAttribute('aria-expanded', open);
+    }
+    menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+    // ---------- Reveal on scroll ----------
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    $('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
